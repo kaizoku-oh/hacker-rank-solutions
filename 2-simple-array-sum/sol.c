@@ -5,7 +5,7 @@ int simpleArraySum(int ar_count, int* ar)
 
   sum = 0;
   if(ar)
-    {
+  {
     for(index=0; index<ar_count; index++)
     {
       sum += ar[index];
