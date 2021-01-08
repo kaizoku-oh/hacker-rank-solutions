@@ -4,7 +4,7 @@ char* timeConversion(char *s)
   int mm;
   int ss;
   char am_pm;
-  static char out[sizeof("0hh:0mm:0ss")];
+  static char out[sizeof("hh:mm:ss")];
   char tcHh[3];
   char tcMm[3];
   char tcSs[3];
@@ -51,7 +51,7 @@ char* timeConversion(char *s)
     {
       snprintf(tcSs, sizeof("ss"), "%d", ss);
     }
-    snprintf(out, sizeof("hh:mm:ss"), "%s:%s:%s", tcHh, tcMm, tcSs);
+    snprintf(out, sizeof(out), "%s:%s:%s", tcHh, tcMm, tcSs);
   }
   return out;
 }
